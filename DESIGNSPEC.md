@@ -29,11 +29,11 @@ Welcome to Wordle!
 
 Enter guess 1/6:
 > trace
-Feedback: .*?*?
+  .*?*?
 
 Enter guess 2/6:
 > crane
-Feedback: *****
+  *****
 
 Congratulations! You guessed the word!
 
@@ -47,27 +47,27 @@ Welcome to Wordle!
 
 Enter guess 1/6:
 > apple
-Feedback: .....
+  .....
 
 Enter guess 2/6:
 > great
-Feedback: *....
+  *....
 
 Enter guess 3/6:
 > clear
-Feedback: ..*..
+  ..*..
 
 Enter guess 4/6:
 > crate
-Feedback: **...
+  **...
 
 Enter guess 5/6:
 > charm
-Feedback: **...
+  **...
 
 Enter guess 6/6:
 > chase
-Feedback: **...
+  **...
 
 Sorry, you didn't guess the word.
 The correct word was 'crane'.
@@ -82,7 +82,7 @@ Welcome to Wordle!
 
 Enter guess 1/6:
 > brave
-Feedback: .....
+  .....
 
 Enter guess 2/6:
 > brav
