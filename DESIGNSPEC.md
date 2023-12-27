@@ -91,9 +91,9 @@ Invalid input: Guess must be 5 letters. Try again.
 
 Enter guess 2/6:
 > brave
-Invalid input: Repeat guess. Try a different word.
+Invalid input: Repeat guess. Try again.
 
 Enter guess 2/6:
 > baave
-Invalid input: Not in word list. Try a different word.
+Invalid input: Not in word list. Try again.
 ```
