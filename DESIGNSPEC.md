@@ -23,7 +23,9 @@ After each guess, the player receives feedback for each letter in the guessed wo
 
 ## Interface
 
-### Example Gameplay: Winning Scenario
+### Example Gameplay
+
+#### Winning Scenario
 
 ```plaintext
 Welcome to Wordle!
