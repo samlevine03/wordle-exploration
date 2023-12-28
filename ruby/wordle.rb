@@ -1,5 +1,6 @@
 require 'set'
 require 'pathname'
+require 'optparse'
 
 WORDS_PATH = Pathname.new(__FILE__).dirname.join('..', 'words.txt').realpath.to_s
 GUESSES_PATH = Pathname.new(__FILE__).dirname.join('..', 'guesses.txt').realpath.to_s
@@ -29,13 +30,36 @@ end
 
 
 def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner = "Usage: wordle.rb [options]"
+
+    opts.on("-sSECRET", "--secret=SECRET", "Specify the secret word for the game") do |s|
+      options[:secret] = s.downcase
+    end
+
+    opts.on("-i", "--info", "Display game information") do |i|
+      options[:info] = i
+    end
+  end.parse!
+
   words = File.readlines(WORDS_PATH).map(&:strip)
   guesses = File.readlines(GUESSES_PATH).map(&:strip)
   valid_guesses = Set.new(words + guesses)
 
-  secret = words.sample
-  attempts = Set.new
+  if options[:info]
+    puts "Number of possible secret words: #{words.size}"
+    puts "Number of valid guesses: #{valid_guesses.size}"
+    return
+  end
 
+  secret = options[:secret] || words.sample
+  if options[:secret] && !valid_guesses.include?(secret)
+    puts "Invalid input: Secret word not in word list. Exiting."
+    return
+  end
+
+  attempts = Set.new
   puts "Welcome to Wordle!"
 
   6.times do |attempt|
