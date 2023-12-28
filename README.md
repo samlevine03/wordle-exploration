@@ -20,6 +20,7 @@ The project will eventually include implementations in the following languages:
 - [ ] Erlang
 - [ ] F#
 - [ ] Go
+- [ ] Groovy
 - [ ] Haskell
 - [ ] Java
 - [ ] JavaScript
@@ -32,7 +33,7 @@ The project will eventually include implementations in the following languages:
 - [X] Python
 - [ ] R
 - [ ] Racket
-- [ ] Ruby
+- [X] Ruby
 - [ ] Rust
 - [ ] Scala
 - [ ] Swift (not sure if this is possible)
