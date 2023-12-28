@@ -1,3 +1,4 @@
+import argparse
 import random
 import os
 
@@ -21,11 +22,26 @@ def score(secret, guess):
     return ''.join(feedback)
 
 def main():
+    parser = argparse.ArgumentParser(description='Play a game of Wordle.')
+    parser.add_argument('--secret', '-s', type=str, help='Specify the secret word for the game', default=None)
+    parser.add_argument('--info', '-i', action='store_true', help='Display game information')
+    args = parser.parse_args()
+
     with open(WORDS_PATH) as words_file, open(GUESSES_PATH) as guesses_file:
         words = [line.strip() for line in words_file.readlines()]
         guesses = [line.strip() for line in guesses_file.readlines()]
     secret, valid_guesses = random.choice(words), set(words + guesses)
     guesses = set()
+
+    if args.secret:
+        secret = args.secret.lower()
+        if secret not in valid_guesses:
+            print("Invalid input: Secret word not in word list. Exiting.")
+            return
+    if args.info:
+        print(f"Number of possible secret words: {len(words)}")
+        print(f"Number of valid guesses: {len(valid_guesses)}")
+        return
 
     print("Welcome to Wordle!")
 
