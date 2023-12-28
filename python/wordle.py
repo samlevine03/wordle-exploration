@@ -6,19 +6,19 @@ GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'guesses.txt')
 
 def score(secret, guess):
     secret_counts = {c: secret.count(c) for c in secret}
-    feedback = '.....'
+    feedback = ['.' for _ in range(len(secret))]
 
     for i, g in enumerate(guess):
         if g == secret[i]:
-            feedback = feedback[0:i] + '*' + feedback[i+1:]
+            feedback[i] = '*'
             secret_counts[g] -= 1
     
     for i, g in enumerate(guess):
         if g != secret[i] and g in secret and secret_counts[g] > 0:
-            feedback = feedback[0:i] + '?' + feedback[i+1:]
+            feedback[i] = '?'
             secret_counts[g] -= 1
 
-    return feedback
+    return ''.join(feedback)
 
 def main():
     with open(WORDS_PATH) as words_file, open(GUESSES_PATH) as guesses_file:
