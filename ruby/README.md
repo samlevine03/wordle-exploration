@@ -1,4 +1,4 @@
-# Wordle in Python
+# Wordle in Ruby
 
 ## Overview
 
