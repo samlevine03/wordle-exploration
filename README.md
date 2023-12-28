@@ -15,7 +15,7 @@ The project will eventually include implementations in the following languages:
 - [ ] C
 - [ ] C++
 - [ ] Clojure
-- [ ] Dart (?)
+- [ ] Dart
 - [ ] Elixir
 - [ ] Erlang
 - [ ] F#
@@ -34,7 +34,7 @@ The project will eventually include implementations in the following languages:
 - [ ] Ruby
 - [ ] Rust
 - [ ] Scala
-- [ ] Swift
+- [ ] Swift (not sure if this is possible)
 
 Here's a basic breakdown of the types of languages I'm working with
 - **Object-Oriented and OOP-ish:** Python, JavaScript, Java, etc. 
