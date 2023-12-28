@@ -2,7 +2,7 @@
 
 ## Overview
 
-Python is probably my best language, so I wanted to have a really clean implementation of the game. Admittedly, I have everything running in the `main` function. The implementation is simple and concise, eliminating the need for separate helper functions while maintaining readability and efficiency.
+Python is probably my best language, so I wanted to have a really clean implementation of the game. Admittedly, I have almost everything running in the `main` function. The implementation is simple and concise, eliminating the need for separate helper functions while maintaining readability and efficiency.
 
 ## Python Implementation Notes
 
