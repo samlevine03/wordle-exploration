@@ -155,6 +155,7 @@ def main():
     expected_feedback = ['.?*..', '*****']
     test_wordle_with_secret(args.language, secret, guesses, expected_feedback)
 
+    # Test some invalid guesses
     secret = 'brave'
     guesses = ['barv', 'bbbbb', 'stare', 'stare', 'brave']
     test_wordle_with_invalid_guesses(args.language, secret, guesses)
