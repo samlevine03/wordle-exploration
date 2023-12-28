@@ -8,21 +8,25 @@ def score(secret, guess)
   secret_counts = Hash.new(0)
   secret.each_char { |c| secret_counts[c] += 1 }
 
-  feedback = ''
-  secret.chars.zip(guess.chars).each do |s, g|
-    if s == g
-      feedback += '*'
-      secret_counts[s] -= 1
-    elsif secret.include?(g) && secret_counts[g] > 0
-      feedback += '?'
-      secret_counts[g] -= 1
-    else
-      feedback += '.'
+  feedback = '.....'
+  
+  (0...secret.length).each do |i|
+    if secret[i] == guess[i]
+      feedback[i] = '*'
+      secret_counts[guess[i]] -= 1
+    end
+  end
+
+  (0...secret.length).each do |i|
+    if secret[i] != guess[i] && secret_counts[guess[i]] > 0
+      feedback[i] = '?'
+      secret_counts[guess[i]] -= 1
     end
   end
 
   feedback
 end
+
 
 def main
   words = File.readlines(WORDS_PATH).map(&:strip)
