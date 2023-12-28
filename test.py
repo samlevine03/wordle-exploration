@@ -139,5 +139,7 @@ def main():
     guesses = ['barv', 'bbbbb', 'stare', 'stare', 'brave']
     test_wordle_with_invalid_guesses(args.language, secret, guesses)
 
+    print("All tests passed successfully.")
+
 if __name__ == '__main__':
     main()
