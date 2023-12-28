@@ -31,6 +31,7 @@ The project will eventually include implementations in the following languages:
 - [ ] PHP
 - [X] Python
 - [ ] R
+- [ ] Racket
 - [ ] Ruby
 - [ ] Rust
 - [ ] Scala
