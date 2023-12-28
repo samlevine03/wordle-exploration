@@ -7,7 +7,6 @@ I learned some basic Ruby (more specifically Rails) very recently, and found the
 ## Ruby Implementation Notes
 
 - **Dynamic File Paths:** The Ruby script uses the `Pathname` library to construct paths to `words.txt` and `guesses.txt`, ensuring compatibility across different environments and enhancing code readability. 
-- **Simplified Logic:** Leveraging Ruby's expressive syntax, the feedback generation logic in the `score` method is both concise and efficient. The use of `each_char` and `zip` elegantly handles the comparison of characters in the secret word and the guess. It's almost a "functional" approach. 
 - **Ruby's Set for Guess Tracking:** The use of Ruby's `Set` class for storing guesses efficiently handles repeat guess validation.
 
 ## Running the Ruby Version
