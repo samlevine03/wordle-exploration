@@ -4,6 +4,20 @@ import os
 WORDS_PATH = os.path.join(os.path.dirname(__file__), '..', 'words.txt')     # we can't just say 'WORDS_PATH = ../words.txt' because then we can only only run this script from the python directory
 GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'guesses.txt')
 
+def score(secret, guess):
+    secret_counts = {c: secret.count(c) for c in secret}
+    feedback = ''
+    for s, g in zip(secret, guess):
+        if s == g:
+            feedback += '*'
+            secret_counts[s] -= 1
+        elif g in secret and secret_counts[g] > 0:
+            feedback += '?'
+            secret_counts[g] -= 1
+        else:
+            feedback += '.'
+    return feedback
+
 def main():
     with open(WORDS_PATH) as words_file, open(GUESSES_PATH) as guesses_file:
         words = [line.strip() for line in words_file.readlines()]
@@ -26,7 +40,7 @@ def main():
                 guesses.add(guess)
                 break
 
-        feedback = ''.join('*' if c == secret[i] else '?' if c in secret else '.' for i, c in enumerate(guess))  # replaced helper function with list comprehension
+        feedback = score(secret, guess)
         print(f"  {feedback}")
 
         if guess == secret:

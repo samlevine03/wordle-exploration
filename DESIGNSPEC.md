@@ -18,8 +18,10 @@ This document outlines the design specifications for the Wordle-like command-lin
 After each guess, the player receives feedback for each letter in the guessed word:
 
 - `*` (Asterisk): The letter is correct and in the correct position.
-- `?` (Question Mark): The letter is correct but in the wrong position.
-- `.` (Period): The letter is not in the word.
+- `?` (Question Mark): The letter is correct but in the wrong position. However, if a letter appears more times in the guess than in the secret word, only the correct number of occurrences are marked with `?`. Additional occurrences are marked with `.`.
+- `.` (Period): The letter is not in the word or has already been counted in the secret word.
+
+This feedback mechanism ensures accurate representation of the player's guess in relation to the secret word, especially in scenarios with duplicate letters. 
 
 ## Interface
 
