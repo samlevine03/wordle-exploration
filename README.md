@@ -8,12 +8,39 @@ This project aims to create a command-line version of the popular word game Word
 
 ### Languages
 
-The project includes implementations in the following languages:
+The project will eventually include implementations in the following languages:
 
-- **Object-Oriented and OOP-ish:** Java, C++, C#, Python, Ruby, PHP, TypeScript, JavaScript, Kotlin
-- **Functional:** Haskell, OCaml, Elixir, F#, Clojure
-- **Procedural:** C, Go, Rust
-- **Scripting:** Python, Perl, Lua, Bash
+- [ ] Bash
+- [ ] C#
+- [ ] C
+- [ ] C++
+- [ ] Clojure
+- [ ] Dart (?)
+- [ ] Elixir
+- [ ] Erlang
+- [ ] F#
+- [ ] Go
+- [ ] Haskell
+- [ ] Java
+- [ ] JavaScript
+- [ ] Kotlin
+- [ ] Lua
+- [ ] OCaml
+- [ ] Pascal
+- [ ] Perl
+- [ ] PHP
+- [X] Python
+- [ ] R
+- [ ] Ruby
+- [ ] Rust
+- [ ] Scala
+- [ ] Swift
+
+Here's a basic breakdown of the types of languages I'm working with
+- **Object-Oriented and OOP-ish:** Python, JavaScript, Java, etc. 
+- **Functional:** Haskell, OCaml, etc. 
+- **Procedural:** C, Go, Rust, etc. 
+- **Scripting:** Perl, Lua, Bash, etc.
 
 ### Repository Structure
 
