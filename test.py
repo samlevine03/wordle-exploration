@@ -1,7 +1,6 @@
 import argparse
 import subprocess
 import shutil
-import os
 
 LANGUAGE_PATHS = {
     'python': ['python3', 'wordle.py'],
