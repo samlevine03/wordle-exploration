@@ -7,7 +7,7 @@ GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'guesses.txt')
 def score(secret, guess):
     secret_counts = {c: secret.count(c) for c in secret}
     feedback = '.....'
-    
+
     for i, g in enumerate(guess):
         if g == secret[i]:
             feedback = feedback[0:i] + '*' + feedback[i+1:]
@@ -28,7 +28,6 @@ def main():
     guesses = set()
 
     print("Welcome to Wordle!")
-    secret = 'bleed'
 
     for attempt in range(1, 7):
         while True:
