@@ -4,10 +4,6 @@
 
 This document outlines the design specifications for the Wordle-like command-line game implemented in multiple programming languages. The game will follow a consistent set of rules and feedback symbols across all implementations. In order to figure out if a game is complete, I created `test.py`. Running `python3 test.py [language]` will spin up a process that tests a few tricky edge cases and makes sure the game is functioning fully as per the specs below. 
 
-In order to be compatible with the test script, each game must now have two additional arguments that can be passed when running the game.
-1. `-i`/`--info`: This should print some basic stats about the game, such as number of possible secret words and number of legal guesses.
-2. `-s`/`--secret [SECRET]`: This allows the user to specify what the secret word should be, allowing for easy testing. 
-
 ## Game Rules
 
 1. **Objective:** The player's goal is to guess a secret word within a limited number of attempts.
