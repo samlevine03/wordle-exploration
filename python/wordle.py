@@ -4,7 +4,7 @@ import os
 WORDS_PATH = os.path.join(os.path.dirname(__file__), '..', 'words.txt')     # we can't just say 'WORDS_PATH = ../words.txt' because then we can only only run this script from the python directory
 GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'guesses.txt')
 
-def score(secret, guess):
+def score(secret: str, guess: str) -> str:
     secret_counts = {c: secret.count(c) for c in secret}
     feedback = ['.' for _ in range(len(secret))]
 
@@ -20,7 +20,7 @@ def score(secret, guess):
 
     return ''.join(feedback)
 
-def main():
+def main() -> None:
     with open(WORDS_PATH) as words_file, open(GUESSES_PATH) as guesses_file:
         words = [line.strip() for line in words_file.readlines()]
         guesses = [line.strip() for line in guesses_file.readlines()]
