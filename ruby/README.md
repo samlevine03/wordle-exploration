@@ -6,7 +6,7 @@ I learned some basic Ruby (more specifically Rails) very recently, and found the
 
 ## Ruby Implementation Notes
 
-- **Dynamic File Paths:** The Ruby script uses the `Pathname` library to construct paths to `words.txt` and `guesses.txt`, ensuring compatibility across different environments and enhancing code readability. 
+- **Dynamic File Paths:** The Ruby script uses the `Pathname` library to construct paths to `wordlist.txt` and `dictionary.txt`, ensuring compatibility across different environments and enhancing code readability. 
 - **Ruby's Set for Guess Tracking:** The use of Ruby's `Set` class for storing guesses efficiently handles repeat guess validation.
 
 ## Running the Ruby Version

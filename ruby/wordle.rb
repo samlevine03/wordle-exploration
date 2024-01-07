@@ -1,8 +1,8 @@
 require 'set'
 require 'pathname'
 
-WORDS_PATH = Pathname.new(__FILE__).dirname.join('..', 'words.txt').realpath.to_s
-GUESSES_PATH = Pathname.new(__FILE__).dirname.join('..', 'guesses.txt').realpath.to_s
+WORDS_PATH = Pathname.new(__FILE__).dirname.join('..', 'wordlist.txt').realpath.to_s
+GUESSES_PATH = Pathname.new(__FILE__).dirname.join('..', 'dictionary.txt').realpath.to_s
 
 def score(secret, guess)
   secret_counts = Hash.new(0)

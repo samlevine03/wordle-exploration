@@ -1,8 +1,8 @@
 import random
 import os
 
-WORDS_PATH = os.path.join(os.path.dirname(__file__), '..', 'words.txt')     # we can't just say 'WORDS_PATH = ../words.txt' because then we can only only run this script from the python directory
-GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'guesses.txt')
+WORDS_PATH = os.path.join(os.path.dirname(__file__), '..', 'wordlist.txt')     # we can't just say 'WORDS_PATH = ../wordlist.txt' because then we can only only run this script from the python directory
+GUESSES_PATH = os.path.join(os.path.dirname(__file__), '..', 'dictionary.txt')
 
 def score(secret: str, guess: str) -> str:
     secret_counts = {c: secret.count(c) for c in secret}

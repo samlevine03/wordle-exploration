@@ -7,11 +7,11 @@ This document outlines the design specifications for the Wordle-like command-lin
 ## Game Rules
 
 1. **Objective:** The player's goal is to guess a secret word within a limited number of attempts.
-2. **Word List:** The secret word is selected from a list of words contained in `words.txt`.
-3. **Legal Guesses:** In addition to the words in `words.txt`, players can make guesses from an additional list of legal words found in `guesses.txt`. So guesses should be checked against the words from both files for validity. 
+2. **Word List:** The secret word is selected from a list of words contained in `wordlist.txt`.
+3. **Legal Guesses:** In addition to the words in `wordlist.txt`, players can make guesses from an additional list of legal words found in `dictionary.txt`. So guesses should be checked against the words from both files for validity. 
 4. **Word Length:** Each secret word is exactly 5 letters long.
 5. **Number of Guesses:** Players have 6 attempts to guess the word correctly.
-6. **Guess Validation:** Only valid 5-letter words from `words.txt` and `guesses.txt` are accepted as guesses. Implementations should handle and inform invalid inputs accordingly.
+6. **Guess Validation:** Only valid 5-letter words from `wordlist.txt` and `dictionary.txt` are accepted as guesses. Implementations should handle and inform invalid inputs accordingly.
 
 ## Feedback Mechanism
 

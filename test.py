@@ -14,24 +14,24 @@ LANGUAGE_CWD = {
 }
 
 def modify_words_file(temp_word, words_path, backup_words_path):
-    # Backup the original words.txt
+    # Backup the original wordlist.txt
     shutil.copyfile(words_path, backup_words_path)
 
-    # Write the temporary word to words.txt
+    # Write the temporary word to wordlist.txt
     with open(words_path, 'w') as file:
         file.write(temp_word + '\n')
 
 def modify_guesses_file(temp_guesses, guesses_path, backup_guesses_path):
-    # Backup the original guesses.txt
+    # Backup the original dictionary.txt
     shutil.copyfile(guesses_path, backup_guesses_path)
 
-    # Write the temporary guesses to guesses.txt (guesses is a list of words)
+    # Write the temporary guesses to dictionary.txt (guesses is a list of words)
     with open(guesses_path, 'w') as file:
         for guess in temp_guesses:
             file.write(guess + '\n')
     
 def restore_file(file_path, backup_path):
-    # Restore the original words.txt
+    # Restore the original wordlist.txt
     shutil.move(backup_path, file_path)
 
 def test_wordle_with_secret(language, secret, guesses, expected_feedback):
@@ -40,9 +40,9 @@ def test_wordle_with_secret(language, secret, guesses, expected_feedback):
 
     game_path = LANGUAGE_PATHS[language]
     cwd = LANGUAGE_CWD[language]
-    words_path = 'words.txt'
+    words_path = 'wordlist.txt'
     backup_path = words_path + '.bak'
-    guesses_path = 'guesses.txt'
+    guesses_path = 'dictionary.txt'
     backup_guesses_path = guesses_path + '.bak'
 
     try:
@@ -80,9 +80,9 @@ def test_wordle_with_invalid_guesses(language, secret, guesses):
 
     game_path = LANGUAGE_PATHS[language]
     cwd = LANGUAGE_CWD[language]
-    words_path = 'words.txt'
+    words_path = 'wordlist.txt'
     backup_path = words_path + '.bak'
-    guesses_path = 'guesses.txt'
+    guesses_path = 'dictionary.txt'
     backup_guesses_path = guesses_path + '.bak'
 
     try:

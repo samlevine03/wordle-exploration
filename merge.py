@@ -1,5 +1,5 @@
 # https://gist.github.com/nshafer/8e12aa557cc91c6b16a6057e83e4741e
-# I missed some words. To add new words to words.txt, put them in new.txt in alphabetical order, then run this script.
+# I missed some words. To add new words to wordlist.txt, put them in new.txt in alphabetical order, then run this script.
 
 def merge_and_sort_files(file1, file2, output_file):
     # Read words from first file
@@ -19,4 +19,4 @@ def merge_and_sort_files(file1, file2, output_file):
             f.write(word + '\n')
 
 # Example usage
-merge_and_sort_files('words.txt', 'new.txt', 'words.txt')  # This will update 'words.txt' with the sorted list
+merge_and_sort_files('wordlist.txt', 'new.txt', 'wordlist.txt')  # This will update 'wordlist.txt' with the sorted list

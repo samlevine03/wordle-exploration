@@ -6,7 +6,7 @@ Python is probably my best language, so I wanted to have a really clean implemen
 
 ## Python Implementation Notes
 
-- **Dynamic File Paths:** The script dynamically constructs paths to `words.txt` and `guesses.txt` to ensure flexibility and compatibility across different environments.
+- **Dynamic File Paths:** The script dynamically constructs paths to `wordlist.txt` and `dictionary.txt` to ensure flexibility and compatibility across different environments.
 - **Simplified Logic:** The latest version features streamlined logic and leverages Python's comprehensions and built-in functions for an efficient implementation. It's almost a "functional" approach. 
 - **Use of `__main__` Guard:** This is a common Python practice for structuring code, allowing the script to be imported as a module in other scripts without immediately running the game. While not super necessary in this case, it's a good practice to adhere to!
 
